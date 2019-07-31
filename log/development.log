@@ -4419,3 +4419,277 @@ Processing by ArticlesController#edit as HTML
 Completed 200 OK in 29ms (Views: 19.8ms | ActiveRecord: 0.9ms)
 
 
+Started PATCH "/articles/7" for 127.0.0.1 at 2019-07-30 18:33:17 -0500
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eeKwRuElE2RL7dV5bSO/lbs/age2sgjAHT58piOu5KJW4VsaSNwgW5C/JLrtHjPazfNnNERNSu/aJs/XfvplEw==", "article"=>{"title"=>"THC", "body"=>"Quimicos psicoactivos del canabidolasasd"}, "commit"=>"Update Article", "id"=>"7"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Redirected to http://localhost:3000/articles/7
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2019-07-30 18:33:17 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:33:19 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-07-30 18:33:21 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-07-30 18:33:37 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"diKFhOz4L72Rty3liExjnrsuJj+9pyiAu53sEbs9hO2GcioqLw5jHwwIDYOLzdFfyoqOCya7/VfHXTKM+Bt+Qw==", "article"=>{"title"=>"Agua enbotellada", "body"=>"Botella de agua embotellada"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Agua enbotellada"], ["body", "Botella de agua embotellada"], ["created_at", "2019-07-30 23:33:37.880041"], ["updated_at", "2019-07-30 23:33:37.880041"]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (165.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to http://localhost:3000/articles/13
+Completed 302 Found in 173ms (ActiveRecord: 166.3ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2019-07-30 18:33:38 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:33:40 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-07-30 18:33:44 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-07-30 18:33:58 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JPiGvnCG6p1wyEe3Uk33YUa20hY+bYz5SpjYx5+ffm7UqCkQs3CmP+13Z9FRzEWgNxJ6IqVxWS42WAZa3LmEwA==", "article"=>{"title"=>"Webcam", "body"=>"Este es un sector de camaras de seguridad"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Webcam"], ["body", "Este es un sector de camaras de seguridad"], ["created_at", "2019-07-30 23:33:58.793688"], ["updated_at", "2019-07-30 23:33:58.793688"]]
+  ↳ app/controllers/articles_controller.rb:18
+  [1m[35m (127.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:18
+Redirected to http://localhost:3000/articles/14
+Completed 302 Found in 136ms (ActiveRecord: 127.6ms)
+
+
+Started GET "/articles/14" for 127.0.0.1 at 2019-07-30 18:33:58 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:34:01 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2019-07-30 18:48:41 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:48:42 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/7" for 127.0.0.1 at 2019-07-30 18:58:41 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:58:42 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2019-07-30 18:58:44 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-30 18:58:45 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-07-31 16:07:50 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/mephistodevelop/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/mephistodevelop/.rvm/gems/ruby-2.6.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.0ms)
+Completed 200 OK in 54ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-31 16:07:58 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 830ms (Views: 792.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2019-07-31 16:08:05 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (85.3ms)
+  Rendered articles/new.html.erb within layouts/application (102.7ms)
+Completed 200 OK in 159ms (Views: 130.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2019-07-31 16:08:10 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 31.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/13/edit" for 127.0.0.1 at 2019-07-31 16:08:14 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:31
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (8.6ms)
+  Rendered articles/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 124ms (Views: 49.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/articles/13" for 127.0.0.1 at 2019-07-31 16:08:16 -0500
+Processing by ArticlesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/W46JMOVLc9mYxvRiGX0+VdeQDHVTdAGfCVwrsCi645do/RMIEzvvLW9Ixaifu0XzEsU1AhyWHaJXt/yifo54g==", "article"=>{"title"=>"Agua enbotellada", "body"=>"Botella de agua embotellada"}, "commit"=>"Update Article", "id"=>"13"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37
+Redirected to http://localhost:3000/articles/13
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/13" for 127.0.0.1 at 2019-07-31 16:08:16 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 43ms (Views: 41.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-07-31 16:11:34 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:4
+  Rendered articles/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 90ms (Views: 88.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+Migrating to CreateComments (20190731220715)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190731220715_create_comments.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "author_name" varchar, "body" text, "article_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_3bf61a60d3"
+FOREIGN KEY ("article_id")
+  REFERENCES "articles" ("id")
+)[0m
+  ↳ db/migrate/20190731220715_create_comments.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_article_id" ON "comments" ("article_id")[0m
+  ↳ db/migrate/20190731220715_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190731220715"]]
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (113.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mephistodevelop/.rvm/gems/ruby-2.6.0/bin/rake:23

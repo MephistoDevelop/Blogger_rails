@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  include ArticlesHelper 
+  include ArticlesHelper
 
   def index
     @articles = Article.all
@@ -7,13 +7,15 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @comment = @article.comments.new
+    @comment.article_id = @article.id
   end
 
-  def new 
+  def new
     @article = Article.new
   end
 
-  def create 
+  def create
     @article = Article.new(article_params)
     @article.save
     flash.notice = "Article '#{@article.title}' was Created  ! "
